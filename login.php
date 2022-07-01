@@ -41,7 +41,7 @@
                  </div>
                  <br>
                  <button class="btn btn-primary">Submit</button>
-                 <P>Have no account? sign in <a href="">Here</a> </P>
+                 <P>Have no account? sign in <a href="register.php">Here</a> </P>
     
                 </form>
      </div>

@@ -39,13 +39,13 @@
                 </div>
                 <div class=" col-lg-12">
                     <label for="email" class="form-label">Confirm Password:</label><br>
-                    <input type="text" name="" class="form-control">
+                    <input type="text"  class="form-control">
                 </div>
                 
                 </div>
                 <br>
                 <button class="btn btn-primary">Submit</button>
-                <P>Have account? sign in Here</P>
+                <P>Have account? sign in <a href="login.php"> Here</a></P>
    
                </form>
     </div>
