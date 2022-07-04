@@ -1,3 +1,14 @@
+<?php
+$server="localhost";
+$username="root";
+$password="";
+$database="zalego";
+$conn=mysqli_connect( $server,$username,$password, $database);
+
+$sql=mysqli_query( $conn, "SELECT * FROM enrollment");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,7 +67,7 @@
       
        <div class="main-content">
          <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-12 align-center">
                     <div class="card-header bg-dark text-center text-white" style="height: 5vh;">
                     <span> <i class="fa fa-group"></i></span>
                         <span>Students</span>
@@ -73,19 +84,25 @@
                 <th scope="col">email</th>
                 <th scope="col">phone</th>
                 <th scope="col">course</th>
-                <th>enrolled on</th>
+                <th>created at</th>
                 <th>action</th>
               </tr>
             </thead>
             <tbody>
+            <?php while ( $fetch= mysqli_fetch_array($sql)){?>
+              
+
+
+                  
               <tr>
-                <th scope="row">1</th>
-                <td>Fosi Amana</td>
-                <td>Male</td>
-                <td>fahah@ehhwa</td>
-                <td>077292737</td>
-                <td>web design</td>
-                <td>1st july 2022</td>
+                
+                <td> <?php echo $fetch['no']?></td>
+                <td><?php echo $fetch['fullname']?></td>
+                <td><?php echo $fetch['gender']?></td>
+                <td><?php echo $fetch['email']?></td>
+                <td><?php echo $fetch['phonenumber']?></td>
+                <td><?php echo $fetch['courses']?></td>
+                <td><?php echo $fetch['created at']?></td>
                 
                 <td>
                   <a href="#" class="btn btn-primary btn-sm"><i  class="fa fa-edit"></i></a>
@@ -93,40 +110,8 @@
                   <a href="#" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
                 </td>
               </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Kevin munene</td>
-                <td>Male</td>
-                <td>07282543</td>
-                <td>Data science</td>
-                <td></td>
-                <td></td>
-                <td> 
-                <a href="#" class="btn btn-primary btn-sm"><i  class="fa fa-edit"></i></a>
-                  <a href="#" class="btn btn-info btn-sm"><i class="fa fa-eye"></i></a>
-                  <a href="#" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
-                </td>
-                
-
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td colspan="2"></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                <a href="#" class="btn btn-primary btn-sm"><i  class="fa fa-edit"></i></a>
-                  <a href="#" class="btn btn-info btn-sm"><i class="fa fa-eye"></i></a>
-                  <a href="#" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
-                </td>
-                
-
-                
-
-                
-              </tr>
+              
+              <?php }?>
             </tbody>
           </table>
            
