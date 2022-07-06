@@ -1,67 +1,23 @@
 <?php
-$server="localhost";
-$username="root";
-$password="";
-$database="zalego";
-$conn=mysqli_connect( $server,$username,$password, $database);
-
+// php logics connection
+require_once( 'logics/dbconnection.php');
 $sql=mysqli_query( $conn, "SELECT * FROM enrollment");
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap Admin Template</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="bootstrap-5.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-</head>
+    <!-- class containe with the header -->
+<?php require_once( 'includes/headers.php') ?>
 <body>
     
     <!-- all our code. written -->
-
-        <div class="header">
-            <a href="index.php"><img src="images/image.webp" alt="zalego logo"  class= "rounded-circle"height="50px" width="50px"></a>
-
-
-        </div>
+    <!-- class container with the header -->
+    <?php require_once( 'includes/navbar.php') ?>
+      
         <div class="sidebar">
-            <nav>
-                <ul>
-                    <li>
-                        <a href="">
-                            <span> <i class="fa fa-group"></i></span>
-                          
-                            <span>student</span>
-                        </a> 
-                        
-
-                    </li>
-                    <li>
-                        <a href="">
-                            <span> <i class="fa fa-folder-open"></i></span>
-                            <span>courses</span>
-
-                        </a>
-
-                    </li>
-                    <li>
-                        <a href="">
-                            <span> <i class="fa fa-graduation-cap"></i></span>
-                            <span>campus</span>
-
-                        </a>
-
-                    </li>
-
-
-                </ul>
-
-            </nav>
+            <!-- the navbar -->
+        <?php require_once( 'includes/sidebar.php') ?>
         
         </div>
       
@@ -74,18 +30,18 @@ $sql=mysqli_query( $conn, "SELECT * FROM enrollment");
                     </div>
                 </div>
              </div>
-     <div class="card-body">
+      <div class="card-body">
         <table class="table table-striped table-hover table-responsive">
             <thead>
               <tr>
-                <th scope="col">no</th>
-                <th scope="col">fullname</th>
-                <th scope="col">gender</th>
-                <th scope="col">email</th>
-                <th scope="col">phone</th>
-                <th scope="col">course</th>
-                <th>created at</th>
-                <th>action</th>
+                <th scope="col">No</th>
+                <th scope="col">Fullname</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Course</th>
+                <th>Enrolled on</th>
+                <th>Action</th>
               </tr>
             </thead>
             <tbody>
@@ -105,7 +61,7 @@ $sql=mysqli_query( $conn, "SELECT * FROM enrollment");
                 <td><?php echo $fetch['created at']?></td>
                 
                 <td>
-                  <a href="#" class="btn btn-primary btn-sm"><i  class="fa fa-edit"></i></a>
+                  <a href="edit-enrollment.php?id=<?php echo $fetch['no']?>" class="btn btn-primary btn-sm"><i  class="fa fa-edit"></i></a>
                   <a href="#" class="btn btn-info btn-sm"><i class="fa fa-eye"></i></a>
                   <a href="#" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
                 </td>
@@ -123,8 +79,6 @@ $sql=mysqli_query( $conn, "SELECT * FROM enrollment");
     
 
 
-<script src="jquery.min.js"></script>
-   <script src="bootstrap-5.2.0/js/bootstrap.bundle.min.js"></script>
-   <script src="bootstrap-5.2.0/js/bootstrap.min.js"></script>
+     <?php require('includes/script.php')?>
 </body>
 </html>
