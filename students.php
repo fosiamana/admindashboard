@@ -31,7 +31,7 @@ $sql=mysqli_query( $conn, "SELECT * FROM enrollment");
                 </div>
              </div>
       <div class="card-body">
-        <table class="table table-striped table-hover table-responsive">
+        <table class="table table-striped table-hover table-responsive table-dark">
             <thead>
               <tr>
                 <th scope="col">No</th>
