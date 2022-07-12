@@ -39,7 +39,7 @@ body{
 
     }
     .main-content{
-        padding-top: 50%;
+        padding-top: 50px;
         background-attachment: fixed;
     }
     @media screen and (min-width: 576px){

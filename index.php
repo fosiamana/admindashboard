@@ -1,3 +1,16 @@
+<?php
+require_once('logics/dbconnection.php');
+// counting total number of students
+$queryEnrolledstudents=mysqli_query( $conn, "SELECT * FROM enrollment");
+$countAllstudents=mysqli_num_rows($queryEnrolledstudents);
+
+// count gender
+$queryEnrolledFemale=mysqli_query( $conn, "SELECT * FROM enrollment WHERE gender='Female'");
+$countAllFemale=mysqli_num_rows($queryEnrolledFemale);
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <!-- header connection -->
@@ -31,7 +44,7 @@
                         <span>Student</span>
                     </div>
                     <div class="card-body "><span><i class="fa fa-group fa-3x"></i></span>
-                        <span class="float-end">00</span>
+                        <span class="float-end badge bg-dark rounded-pill"><?php echo $countAllFemale?></span>
                     </div>
                       
                     <div class="card-footer shadow none p-3 mb-5 bg-light rounded"></div>
