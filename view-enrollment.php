@@ -8,22 +8,13 @@ while($fetchStudent=mysqli_fetch_array( $sqlfetchEnrolledStudent))
     $fullname=$fetchStudent['fullname'];
     $email= $fetchStudent['email'];
     $phonenumber=$fetchStudent['phonenumber'];
-}
-?>
-<?php
-// 1. database connection
-require_once('logics/dbconnection.php');
-$sqlfetchEnrolledStudent= mysqli_query( $conn, 
-"SELECT * FROM enrollment WHERE no='" .$_GET['id']."'");
-while($fetchStudent=mysqli_fetch_array( $sqlfetchEnrolledStudent))
-{
     $gender=$fetchStudent['gender'];
     $courses= $fetchStudent['courses'];
     $enrolledon=$fetchStudent['created at'];
 }
 ?>
 
-
+    
 
 <!DOCTYPE html>
 <html lang="en">
