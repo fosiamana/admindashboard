@@ -38,8 +38,10 @@ $countAllFemale=mysqli_num_rows($queryEnrolledFemale);
                     </div>
                 </div>
              </div>
+             <div class="card"></div>
              <div class="row">
                 <div class="col-lg-3 p-3">
+                 <div class="card">
                     <div class="card-header bg-dark text-center text-white " style="height: 5vh;">
                         <span>Student</span>
                     </div>
@@ -47,9 +49,11 @@ $countAllFemale=mysqli_num_rows($queryEnrolledFemale);
                         <span class="float-end badge bg-dark rounded-pill"><?php echo $countAllFemale ?></span>
                     </div>
                       
-                    <div class="card-footer shadow none p-3 mb-5 bg-light rounded"></div>
+                    <div class="card-footer shadow none p-0 mb-5 bg-light rounded"></div>
+                  </div>
                 </div>
                 <div class="col-lg-3 p-3">
+                  <div class="card">
                     <div class="card-header bg-dark text-center text-white " style="height: 5vh; ">
                         <span>Available courses</span>
                     </div>
@@ -57,12 +61,12 @@ $countAllFemale=mysqli_num_rows($queryEnrolledFemale);
                     <div class="card-body "><span><i class="fa fa-folder-open fa-3x"></i></span>
                         <span class="float-end bottom">00</span>
                     </div>
-                    <span class="float-end"></span>
-
                     
-                    <div class="card-footer shadow none p-3 mb-5 bg-light rounded"></div>
+                     <div class="card-footer shadow none p-0 mb-5 bg-light rounded"></div>
+                  </div>
                 </div>
                 <div class="col-lg-3 p-3">
+                 <div class="card">
                     <div class="card-header bg-dark text-center text-white  "style="height: 5vh;">
                         <span>campus</span>
                     </div>
@@ -70,21 +74,26 @@ $countAllFemale=mysqli_num_rows($queryEnrolledFemale);
                         
                         <span class="float-end">00</span>
                     </div>
-                    <div class="card-footer shadow none p-3 mb-5 bg-light rounded"></div>
+                    <div class="card-footer shadow none p-0 mb-5 bg-light rounded"></div>
+                 </div>
                 </div>
   
                 <div class="col-lg-3 p-3">
+                  <div class="card">
                     <div class="card-header bg-dark text-center text-white "style="height: 5vh;">
                         <span>users</span>
                     </div>
                     <div class="card-body"><span><i class="fa fa-user fa-3x"></i></span>
                         <span class="float-end">00</span>
                     </div>
-                    <div class="card-footer shadow none p-3 mb-5 bg-light rounded"></div>
-                </div>
+                    <div class="card-footer shadow none p-0 mb-5 bg-light rounded"></div>
+                    </div>
+                  </div>
             </div>
+            
             <div class="row">
                 <div class="col-lg-12">
+                 <div class="card">
                     <div class="card-header bg-dark text-center text-white " style="height: 5vh;">
                         <span> Student Analysis</span>
                     </div>
@@ -92,7 +101,8 @@ $countAllFemale=mysqli_num_rows($queryEnrolledFemale);
                         <span><i class="fa fa-line-chart fa-4x"></i></span>
                         
                     </div>
-                    <div class="card-footer shadow none p-3 mb-5 bg-light rounded"></div>
+                    <div class="card-footer shadow none p-0 mb-5 bg-light rounded"></div>
+                 </div>
                 </div>
             </div>
            </div>
