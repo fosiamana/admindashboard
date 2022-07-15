@@ -25,8 +25,8 @@ $sql=mysqli_query( $conn, "SELECT * FROM contactus");
          <div class="row">
                 <div class="col-lg-12 align-center">
                     <div class="card-header bg-dark text-center text-white" style="height: 5vh;">
-                    <span> <i class="fa fa-group"></i></span>
-                        <span>Students</span>
+                    <span> <i class="fa fa-envelope"></i></span>
+                        <span>Messages</span>
                     </div>
                 </div>
              </div>
@@ -57,12 +57,10 @@ $sql=mysqli_query( $conn, "SELECT * FROM contactus");
                 <td><?php echo $fetch['lastname']?></td>
                 <td><?php echo $fetch['email']?></td>
                 <td><?php echo $fetch['phonenumber']?></td>
-                <td><?php echo $fetch['created_at']?></td>
+                <td><?php echo $fetch['message']?></td>
                 
                 <td>
-                  <a href="edit-enrollment.php?id=<?php echo $fetch['no']?>" class="btn btn-primary btn-sm"><i  class="fa fa-edit"></i></a>
-                  <a href="view-enrollment.php?id=<?php echo $fetch['no']?>" class="btn btn-info btn-sm"><i class="fa fa-eye"></i></a>
-                  <a href="delete-enrollment.php?id=<?php echo $fetch['no']?>" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
+                <?php echo $fetch['created_at']?>
                 </td>
               </tr>
               
