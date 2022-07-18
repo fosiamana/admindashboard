@@ -41,6 +41,7 @@ $sql=mysqli_query( $conn, "SELECT * FROM contactus");
                 <th scope="col">Phone</th>
                 <th scope="col">messages</th>
                 <th>Enrolled on</th>
+                <th>Action</th>
             
               </tr>
             </thead>
@@ -61,6 +62,11 @@ $sql=mysqli_query( $conn, "SELECT * FROM contactus");
                 
                 <td>
                 <?php echo $fetch['created_at']?>
+                </td>
+                <td>
+                  <a href="edit-contactus.php?id=<?php echo $fetch['no']?>" class="btn btn-primary btn-sm"><i  class="fa fa-edit"></i></a>
+                  <a href="view-contactus.php?id=<?php echo $fetch['no']?>" class="btn btn-info btn-sm"><i class="fa fa-eye"></i></a>
+                  <a href="delete-contactus.php?id=<?php echo $fetch['no']?>" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
                 </td>
               </tr>
               
