@@ -45,7 +45,7 @@ require_once('logics/process-update-contactus.php')
                              <div class=col-lg-12>
                                     <div class= "card">
                                           <div class="card-header bg-dark text-center text-white">
-                                            <h4> Edit student:</h4>
+                                            <h4> Edit contactus:</h4>
                                             <?php echo $echo ?>
                                          </div>
 

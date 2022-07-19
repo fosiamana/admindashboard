@@ -24,10 +24,12 @@ $sql=mysqli_query( $conn, "SELECT * FROM enrollment");
        <div class="main-content">
          <div class="row">
                 <div class="col-lg-12 align-center">
-                    <div class="card-header bg-dark text-center text-white" style="height: 5vh;">
+                    <div class="card-header bg-dark text-center text-white" style="height: 6vh;">
                     <span> <i class="fa fa-group"></i></span>
                         <span>Students</span>
-                    </div>
+                        <a href="add.php"><button class="btn btn-primary float-end">Add Student</button></a>
+                   </div>
+                    
                 </div>
              </div>
       <div class="card-body">
